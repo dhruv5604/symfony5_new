@@ -15,6 +15,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+
 class QuestionController extends AbstractController
 {
     private $logger;
@@ -48,6 +49,12 @@ class QuestionController extends AbstractController
      */
     public function new()
     {
+        $this->denyAccessUnlessGranted('ROLE_USER');
+        
+        // if (!$this->isGranted('ROLE_ADMIN')) {
+        //     throw $this->createAccessDeniedException('No access for you!');
+        // }
+ 
         return new Response('Sounds like a GREAT feature for V2!');
     }
 
