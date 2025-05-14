@@ -36,6 +36,7 @@ security:
                 enable_csrf: true
             logout: true
             switch_user: true
+            login_throttling: true
             remember_me:
                 secret: '%kernel.secret%'
                 signature_properties: [password]
