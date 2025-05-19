@@ -88,7 +88,7 @@ class RegistrationController extends AbstractController
         
         return $this->redirectToRoute('app_login');
     }
-
+ 
     /**
      * @Route("/verify/resend", name="app_verify_resend_email")
      */

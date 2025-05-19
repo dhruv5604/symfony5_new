@@ -23,7 +23,7 @@ final class Version20200709153558 extends AbstractMigration
         $this->addSql('ALTER TABLE question ADD created_at DATETIME DEFAULT NULL, ADD updated_at DATETIME DEFAULT NULL');
         $this->addSql('UPDATE question SET created_at = NOW(), updated_at = NOW()');
     }
-
+    
     public function down(Schema $schema) : void
     {
         // this down() migration is auto-generated, please modify it to your needs
